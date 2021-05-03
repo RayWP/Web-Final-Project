@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Game - Drag game</title>
+
+        <!-- taken from 6a-2.html -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.9">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- taken from 6.4.html -->
+        <link rel="stylesheet" type="text/css" href="../Style/game.css">
+        <link rel="stylesheet" type="text/css" href="../Style/drag_game.css">
+        <link rel="stylesheet" type="text/css" href="../Style/footer.css">
+        <script src="../Scripts/background_color.js"></script> 
+        <script src="../Scripts/button_animation.js"></script> 
+        <script src="../Scripts/user_settings.js"></script>
+        <script src="../Scripts/drag_game_script.js"></script>
+    </head>
+
+    <body id="body" onload=" setFirstColorForBody(); setUserName(); alert('Ready! Go!'); testGet();">
+
+        <header>
+            <div id="name_bar" red="yes">
+                Hello, my name is avin
+            </div>
+            <!-- learn from 6.4.css using attribute   -->
+            <div style="display: flex;">
+                <a nav_button href="game_hall.html">
+                    <img src="../resources/back_52px.png" height="30px">
+                    back
+                </a>  
+            </div> 
+        </header>
+
+        <!-- taken from "about common semantic and structural elements in HTML.docx" -->
+        <!-- Structural element: main -->
+        <div class="game_center_container" style="background-color: white; height: 50%;" onload="">
+            <div class="drag_game_header">
+                <!-- can you drag it  -->
+                <h1 style="margin: 0px;">Can you drag it?</h1>
+                <p style="text-align: center;">
+                    Hover you pointer/mouse on the bird to make it move<br>
+                    Help the bird to reach the nest.
+                </p>
+            </div>
+
+            <div class="drag_game_container">
+                <div id="bird" onmousemove="moveBird();" onmouseout="resetBird();">
+                </div>
+                <div id="nest"> 
+                </div>
+            </div>
+        </div>
+        <div id="state_display" winorlose="lose" >
+            CORRECT
+        </div>
+        
+    </body>
+    <footer>
+        Owned by Raymond 黄鑫璞 - 2020
+    </footer>
+</html>
+

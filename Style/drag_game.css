@@ -1,0 +1,37 @@
+.drag_game_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#bird
+{
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    /* learned from 6a-3.html to use background-image*/
+    /* to include image to the div */
+    background-image: url(../resources/bird_80px.png);
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    /* to give smooth transition to the bird */
+    transition: all 0.5s ease-in-out;
+}
+#nest{
+    height: 100px;
+    width: 100px;
+    margin-right: 5px;
+    background-color: transparent;
+    background-image: url(../resources/nest_100px.png);
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.drag_game_header{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}

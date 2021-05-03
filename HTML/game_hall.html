@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game - main hall</title>
+
+        <!-- taken from 6a-2.html -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.9">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- taken from 6.4.html -->
+        <link rel="stylesheet" type="text/css" href="../Style/main_game.css">
+        <link rel="stylesheet" type="text/css" href="../Style/footer.css">
+        <script src="../Scripts/background_color.js"></script> 
+        <script src="../Scripts/button_animation.js"></script> 
+        <script src="../Scripts/user_settings.js"></script>
+    </head>
+
+    
+
+    <body id="body" onload="setUserName(); setFirstColorForBody();  alert('Data saved!');">
+        <header>
+            <!-- this is for the greetings -->
+            <nav id="name_bar" red="yes">
+                Hello, my name is avin
+            </nav>
+
+            <!-- this is for navbar -->
+            <!-- learn from 6.4.css using attribute   -->
+            <nav style="display: flex;">
+                <a nav_button href="settings.html">
+                    <img src="../resources/settings_60px.png" height="30px">
+                    settings
+                </a>  
+                <a nav_button href="index.html" onclick="logOut()">
+                    <img src="../resources/login_64px.png" height="30px">
+                    logout
+                </a>
+            </nav>
+            
+        </header>
+
+        <main>
+            <!-- inspired by 6.18.html to use table to make it tidier -->
+            <table cellpadding="3px" width="100%">
+                <tr>
+                    <!-- learn from 6.16.html -->
+                    <td align="center" valign="middle">
+                        <div class="game_container">
+                            <div class="login_form_header">
+                                <!-- learnd from 6.1-6.3.html -->
+                                <h3>Flappy Bird v.2</h3>
+                            </div>
+                            <p>
+                                Are you focus enough?<br>
+                                Drag to help the bird to reach the nest
+                            </p>
+                            <p style="display: none">
+                                Play the Mathematic game with your friend<br>
+                                You will get 2 number and 1 operator, guess the answer!
+                            </p>
+                            <div class="button_container">
+                                <input class="button" onclick="window.location.href='drag_game.html'" value="PLAY!" type="button" onmouseover="enlargeButton(this)" onmouseout="smallenButton(this)">
+                            </div>
+                        </div>
+                    </td>
+                    <td align="center" valign="middle">
+                        <div class="game_container">
+                            <div class="login_form_header">
+                                <!-- learnd from 6.1-6.3.html -->
+                                <h3>Mathematic Game</h3>
+                            </div>
+                            <!-- <div class="description_container"> -->
+                                <p>
+                                    Play the Mathematic game with your friend<br>
+                                    You will get 2 number and 1 operator, guess the answer!
+                                </p>
+                            <!-- </div> -->
+                            
+                            
+                            <div class="button_container">
+                                <!-- <a href="math_game.html"> -->
+                                    <!-- fdsa -->
+                                    <input class="button" onclick="window.location.href='math_game.html'" value="PLAY!" type="button" onmouseover="enlargeButton(this)" onmouseout="smallenButton(this)">
+                                <!-- </a> -->
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </main>
+    </body>
+    <footer>
+        Owned by Raymond 黄鑫璞 - 2020
+    </footer>
+</html>
+
+
+<!-- <a nav_button href="settings.html">
+    <img src="../resources/opened_folder_200px.png" height="30px">
+    archives
+</a> -->

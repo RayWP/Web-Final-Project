@@ -1,0 +1,123 @@
+html, body{
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    vertical-align: middle;
+    justify-content: center;
+    background-color: #52057b;
+}
+
+header{
+    margin: inherit;
+    width: inherit;
+    align-items: inherit;
+    vertical-align: middle;
+    display: flex;
+    justify-content: space-between;
+    
+    /* inspired by 1.html */
+    position: absolute;
+    top: 0px;
+    height: 9%;
+    background-color: aliceblue;
+    
+}
+
+/* Selects all <div> elements where the parent is a <header> element */
+header>div{
+    margin: 20px;
+    font-family: Verdana;
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* learn from 6.4.css using attribute  */
+[nav_button]{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    border-width: 1px;
+    /* radius inspired by 6a-2.html: class radius */
+    border-radius: 100%;
+    border-color: black;
+}
+
+/* learn from 6.5.css hover*/
+[nav_button]:hover{
+
+    cursor: pointer;
+    /* learn from 6a-8.html */
+    animation-name: border_animation;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-duration: 0.5s;
+   
+}
+
+/* modify the container for the form */
+.game_center_container{
+    width: 65%;
+    /* height: 50%; */
+    border: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+#state_display{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    color: whitesmoke;
+    height: 100%;
+    display: flex;
+    top: -100%;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    transition: all;
+    transition-delay: 0.3s;
+    transition-duration: 0.45s;
+    transition-timing-function: ease-in-out;
+}
+
+/* learn from 6.4expansion.css */
+[winorlose="win"]{
+    background-color: #5cdb95;
+}
+
+[winorlose="lose"]{
+    background-color: #df5830;
+}
+
+
+
+/* learn from 6a-8.html */
+/* radius inspired by 6a-2.html: class radius */
+@keyframes border_animation{
+    20%{
+        border-radius: 80%;
+        border-style: dotted;
+    }
+    60%{
+        border-radius: 50%;
+        border-style: dashed;
+    }
+    80%{
+        border-radius: 30%;
+        border-style: solid;
+    }
+    100%{
+        border-radius: 0%;
+        border-style: solid;
+    }
+}

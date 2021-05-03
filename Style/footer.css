@@ -1,0 +1,8 @@
+footer{
+    /* text-decoration: dashed; */
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    text-align: right;
+    margin-right: 2%;
+}
