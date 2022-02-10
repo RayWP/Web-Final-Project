@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Game - Login</title>
+
+        <!-- taken from 6a-2.html -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- taken from 6.4.html -->
+        <link rel="stylesheet" type="text/css" href="/Style/form.css">
+        <link rel="stylesheet" type="text/css" href="/Style/footer.css">
+        <script src="/Scripts/background_color.js"></script> 
+        <script src="/Scripts/button_animation.js"></script> 
+        <script src="/Scripts/user_settings.js"></script>
+    </head>
+
+    <body id="body" onload="setFirstColorForBody(); ">
+
+        <!-- taken from "about common semantic and structural elements in HTML.docx" -->
+        <!-- Structural element: main -->
+        <div class="center_container">
+            
+            <div id = "login_form_header">
+                <!-- inspired by 6.1-6.3.html -->
+                <!-- <ruby> tag inspired by "about common semantic and structural element in HTML.docx" -->
+                <h2>Welcome to <ruby>黄鑫璞</ruby>'s game land</h2>
+                <!-- inspired by 6.6 html -->
+                <p>Welcome to this shiet <ruby>黄鑫璞</ruby>'s game land </p>
+            </div>
+
+            <!-- Strultural element: input type -->
+            <form id="login_form" autocomplete="off"  action="./HTML/game_hall.html " autofocus="name" method="POST">
+                <!-- learned from 5.html -->
+                <label for="search">Username</label>
+                <input name="name" type="text" value="" required>
+
+                <label for="search">E-mail</label>
+                <input name="email" type="email" value="" required>
+
+                <label for="hobby">Hobby</label>
+                <input name="hobby" type="text" value="" required>
+
+                <label for="how">How do you find this website?</label>
+                <input name="how" type="text" value="">
+                             
+                <div class="button_container">
+                    <!-- inspired by 9a-10.Pass and take parameters of a function.html -->
+                    <input class="button" id="button_clear" type="reset" value="Clear" onmouseover="enlargeButton(this)" 
+                        onmouseout="smallenButton(this)">
+                    <input class="button" id="button_submit" type="submit" value="Submit" onmouseover="enlargeButton(this)" 
+                        onmouseout="smallenButton(this)" onclick="getUserDataFromForm();">
+                </div>
+                
+            </form>
+
+        </div>
+    </body>
+    <footer>
+        Owned by Raymond 黄鑫璞 - 2020
+    </footer>
+</html>
+
