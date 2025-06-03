@@ -1,6 +1,6 @@
 var i = 0;
 var seconds = 1.5;
-var color = ["#52057b", "#892cdc", "#bc6ff1","#773899"];
+var color = ["#52057b", "#FF0000", "#00FF00","#773899"];
 
 function setFirstColorForBody() {
     // this color used to make the body color
